@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    --headBtn: 13vw;
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(bgi.jpg);
+    background-size: cover;
+    background-position: right;
+    background-color: #000;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.headerText {
+    position: absolute;
+    width: 31.5vw;
+    right: 20%;
+    top: 15%;
+    transition: 0.3s;
+}
+
+.headerText p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 90px;
+    text-transform: uppercase;
+    color: #605b60;
+    line-height: 80px;
+}
+
+.headerText .head1 {
+    text-align: right;
+    animation: headTextAnim 3s both;
+}
+
+.headerText .head2 {
+    color: #3d3b3d;
+    animation: headTextAnim 1s 2s both;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: var(--headBtn);
+    height: var(--headBtn);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: var(--headBtn);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 80px;
+    color: #e11e26;
+    text-align: center;
+    line-height: var(--headBtn);
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.button:hover~header {
+    filter: blur(4px);
+}
+
+.button:hover .headerText {
+    filter: blur(4px);
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 5px 5px black;
+    font-size: 100px;
+
+}
+
+@keyframes headTextAnim {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@media (max-width:1599px) {
+
+
+    .headerText {
+        width: 38vw;
+        right: 20%;
+    }
+
+
+    .button {
+        font-size: 70px;
+        color: #e11e26;
+    }
+
+    .button:hover {
+        font-size: 90px;
+    }
+}
+
+@media (max-width:1439px) {
+
+    .headerText {
+        width: 38vw;
+        right: 22%;
+    }
+
+    .headerText p {
+        font-size: 80px;
+    }
+
+    .button {
+        font-size: 60px;
+    }
+
+    .button:hover {
+        font-size: 70px;
+    }
+}
+
+@media (max-width:1279px) {
+
+
+    .headerText {
+        width: 38vw;
+        right: 27%;
+    }
+
+    .headerText p {
+        font-size: 70px;
+    }
+
+    .button {
+        font-size: 60px;
+    }
+
+    .button:hover {
+        font-size: 70px;
+    }
+}
+
+
+@media (orientation: landscape) and (max-width:1024px) {
+
+
+    .headerText {
+        width: 45.6vw;
+
+        right: 23%;
+    }
+
+    .button {
+        font-size: 50px;
+    }
+
+    .button:hover {
+        font-size: 60px;
+    }
+}
+
+@media (orientation: landscape) and (max-width:823px) {
+
+
+    .headerText {
+        width: 32.5vw;
+        right: 18%;
+    }
+
+    .headerText p {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .button {
+        font-size: 35px;
+    }
+
+    .button:hover {
+        font-size: 45px;
+    }
+}
+
+@media (orientation: landscape) and (max-width:812px) {
+
+
+    .headerText {
+        width: 33vw;
+    }
+
+    .headerText p {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .button {
+        font-size: 40px;
+    }
+
+    .button:hover {
+        font-size: 50px;
+    }
+}
+
+@media (orientation: landscape) and (max-width:720px) {
+
+
+    .headerText {
+        width: 46.6vw;
+        right: 23%;
+    }
+
+    .headerText p {
+        font-size: 50px;
+        line-height: 50px;
+    }
+}
+
+@media (orientation: landscape) and (max-width:667px) {
+
+
+    .headerText {
+        width: 35vw;
+        right: 17%;
+    }
+
+    .headerText p {
+        font-size: 35px;
+        line-height: 35px;
+    }
+
+    .button {
+        font-size: 30px;
+    }
+
+    .button:hover {
+        font-size: 40px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 1024px) {
+
+
+    .headerText {
+        width: 59vw;
+        left: 3%;
+        top: 10%;
+    }
+
+    .headerText p {
+        font-size: 90px;
+        line-height: 80px;
+    }
+
+    .headerText .head1 {
+        text-align: left;
+    }
+
+    .headerText .head2 {
+        text-align: right;
+    }
+
+    .button {
+        width: 20vh;
+        height: 20vh;
+        border-radius: 50%;
+        font-size: 100px;
+        line-height: 20vh;
+    }
+
+    .button:hover {
+        font-size: 110px;
+
+    }
+}
+
+@media (orientation: portrait) and (max-width: 414px) {
+
+    .headerText {
+        width: 100vw;
+        left: 3%;
+        top: 3%;
+    }
+
+    .headerText p {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .headerText .head1 {
+        text-align: left;
+    }
+
+    .headerText .head2 {
+        text-align: left;
+    }
+
+    .button {
+        font-size: 50px;
+    }
+
+    .button:hover {
+        font-size: 60px;
+
+    }
+}
+
+@media (orientation: portrait) and (max-width: 360px) {
+
+
+
+    .headerText p {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .button {
+        font-size: 40px;
+    }
+
+    .button:hover {
+        font-size: 50px;
+
+    }
+}

@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.yogaPage {
+    height: 100vh;
+    /* width: 100%; */
+    background-image: url(yoga.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    font-family: "Open Sans", sans-serif;
+    overflow: hidden;
+}
+
+.titleYog {
+    width: 100%;
+    height: 100px;
+    background-color: #c2c2c2;
+}
+
+.titleYog h1 {
+    text-align: center;
+    line-height: 100px;
+    font-size: 64px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #2b2b2b;
+}
+
+.wrapYog {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 100px);
+}
+
+.aboutYog {
+    position: absolute;
+    width: 50%;
+    left: 80px;
+    top: 80px;
+}
+
+.aboutYog h2 {
+    text-transform: uppercase;
+    font-size: 60px;
+    color: #b07d7d;
+    border-bottom: 4px solid #8c6464;
+}
+
+
+.aboutYog p {
+    font-size: 20px;
+    color: #b0a7a7;
+}
+
+.checkYog {
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    width: 40%;
+    height: 30%;
+}
+
+
+.checkYog .dateYog,
+.checkYog .perTrainYog {
+    height: 50%;
+}
+
+.checkYog i {
+    margin-right: 20px;
+    font-size: 60px;
+    padding: 15px;
+    border: solid 3px #b0a7a7;
+    border-radius: 50%;
+    background-color: #b0a7a7;
+    transition: .4s;
+}
+
+.checkYog p {
+    position: relative;
+    font-size: 24px;
+    text-transform: uppercase;
+    line-height: 100%;
+    color: #b07d7d;
+    cursor: pointer;
+    /* overflow: hidden; */
+    transition: .4s;
+}
+
+.perTrainYog {
+    margin-top: 20px;
+}
+
+.checkYog p:hover span {
+    right: 8%;
+}
+
+.checkYog p:hover {
+    font-size: 28px;
+}
+
+.checkYog p:hover i {
+    font-size: 65px;
+}
+
+.checkYog span {
+    position: absolute;
+    /* width: 85%; */
+    height: 3px;
+    background-color: #b0a7a7;
+    bottom: 0;
+    left: 8%;
+    right: 100%;
+    transition: .4s;
+}
+
+@media (max-width:1439px) {
+
+    .aboutYog {
+        width: 60%;
+    }
+
+    .aboutYog h2 {
+        font-size: 45px;
+    }
+
+    .aboutYog p {
+        font-size: 18px;
+    }
+
+    .checkYog {
+        top: 40%;
+        width: 50%;
+    }
+
+    .checkYog i {
+        font-size: 40px;
+    }
+
+    .checkYog p {
+        font-size: 24px;
+        line-height: 100%;
+    }
+
+    .checkYog p:hover span {
+        right: 5%;
+    }
+
+    .checkYog p:hover {
+        font-size: 28px;
+    }
+
+    .checkYog p:hover i {
+        font-size: 45px;
+    }
+}
+
+@media (orientation: landscape) and (max-width:1024px) {
+    .aboutYog {
+        top: 5%;
+        left: 5%;
+        width: 80%;
+    }
+
+    .aboutYog h2 {
+        font-size: 35px;
+    }
+
+    .aboutYog p {
+        font-size: 14px;
+    }
+
+    .checkYog {
+        left: 5%;
+        top: 40%;
+        width: 80%;
+    }
+
+    .checkYog p {
+        font-size: 18px;
+    }
+
+    .checkYog p:hover span {
+        right: 40%;
+    }
+
+    .checkYog p:hover {
+        font-size: 20px;
+    }
+
+    .checkYog span {
+        left: 5%;
+    }
+}
+
+@media (orientation: landscape) and (max-width:823px) {
+    .titleYog {
+        height: 50px;
+    }
+
+    .titleYog h1 {
+        line-height: 50px;
+        font-size: 35px;
+    }
+
+    .wrapYog {
+        height: calc(100% - 50px);
+    }
+
+    .aboutYog h2 {
+        font-size: 25px;
+    }
+
+    .aboutYog p {
+        font-size: 12px;
+    }
+
+    .checkYog {
+        left: 5%;
+        top: 40%;
+        width: 80%;
+    }
+
+    .checkYog p {
+        font-size: 14px;
+    }
+
+    .checkYog p:hover span {
+        right: 40%;
+    }
+
+    .checkYog p:hover {
+        font-size: 16px;
+    }
+
+    .checkYog span {
+        left: 5%;
+    }
+
+    .checkYog i {
+        padding: 8px;
+        font-size: 30px;
+    }
+
+    .checkYog p:hover i {
+        font-size: 35px;
+    }
+}
+
+@media (orientation: landscape) and (max-width:568px) {
+    .titleYog h1 {
+        font-size: 30px;
+    }
+
+    .aboutYog h2 {
+        font-size: 20px;
+    }
+
+    .aboutYog p {
+        font-size: 10px;
+    }
+
+
+    .checkYog p {
+        font-size: 12px;
+    }
+
+    .checkYog p:hover {
+        font-size: 14px;
+    }
+
+    .checkYog p:hover span {
+        right: 25%;
+    }
+
+    .checkYog span {
+        left: 7%;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+    .aboutYog {
+        top: 5%;
+        left: 2.5%;
+        width: 95%;
+        text-align: center;
+    }
+
+    .aboutYog h2 {
+        font-size: 40px;
+    }
+
+    .aboutYog p {
+        font-size: 20px;
+    }
+
+    .checkYog {
+        left: 5%;
+        top: 40%;
+        width: 80%;
+    }
+
+    .checkYog i {
+        font-size: 50px;
+    }
+
+    .checkYog p:hover i {
+        font-size: 55px;
+    }
+
+    .checkYog p {
+        font-size: 22px;
+    }
+
+    .checkYog p:hover span {
+        right: 40%;
+    }
+
+    .checkYog p:hover {
+        font-size: 24px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 414px) {
+    .titleYog h1 {
+        font-size: 35px;
+    }
+
+    .aboutYog h2 {
+        font-size: 28px;
+    }
+
+    .aboutYog p {
+        font-size: 16px;
+    }
+
+    .checkYog i {
+        padding: 5px;
+        margin-right: 5px;
+        font-size: 30px;
+    }
+
+    .checkYog p:hover i {
+        font-size: 35px;
+    }
+
+    .checkYog p {
+        font-size: 14px;
+    }
+
+    .checkYog p:hover span {
+        right: 5%;
+    }
+
+    .checkYog p:hover {
+        font-size: 15px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 375px) {
+    .titleYog {
+        height: 50px;
+    }
+
+    .wrapYog {
+        height: calc(100% - 50px);
+    }
+
+    .titleYog h1 {
+        font-size: 28px;
+        line-height: 50px;
+    }
+
+    .aboutYog h2 {
+        font-size: 24px;
+    }
+
+    .aboutYog p {
+        font-size: 12px;
+    }
+
+
+    .checkYog p:hover i {
+        font-size: 35px;
+    }
+
+    .checkYog p {
+        font-size: 12px;
+    }
+
+
+    .checkYog p:hover {
+        font-size: 13px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 320px) {
+    .titleYog h1 {
+        font-size: 28px;
+    }
+
+    .aboutYog h2 {
+        font-size: 18px;
+    }
+
+    .aboutYog p {
+        font-size: 10px;
+    }
+
+    .checkYog i {
+        font-size: 21px;
+    }
+
+    .checkYog p:hover i {
+        font-size: 25px;
+    }
+
+    .checkYog p {
+        font-size: 10px;
+    }
+
+
+    .checkYog p:hover {
+        font-size: 12px;
+    }
+
+}

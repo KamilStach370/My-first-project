@@ -1,0 +1,1061 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+
+.boxerPage {
+    height: 100vh;
+    /* width: 100%; */
+}
+
+.box-title {
+    width: 100%;
+    height: 100px;
+    background-color: #c2c2c2;
+}
+
+.box-title h1 {
+    text-align: center;
+    font-size: 64px;
+    line-height: 100px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #2b2b2b;
+}
+
+.box-left,
+.box-right {
+    width: 50%;
+    height: calc(100vh - 100px);
+    float: left;
+    font-family: "Open Sans", sans-serif;
+}
+
+.box-right {
+    background-image: url(gloves.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box-left {
+    position: relative;
+    background-color: #49494b;
+}
+
+.box-left img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 50vh;
+    z-index: 1;
+    animation: movingImgBox 20s linear infinite both;
+}
+
+.bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -35%);
+
+    text-align: center;
+    /* text-transform: uppercase; */
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    font-size: 100px;
+    color: #c2c2c2;
+    animation: movingBgBox 20s linear infinite both;
+}
+
+.infoBox {
+    position: absolute;
+    right: 10px;
+    top: 4px;
+    text-align: right;
+}
+
+.infoBox h1 {
+    font-size: 70px;
+    border-bottom: solid 4px black;
+    color: #c2c2c2;
+}
+
+.infoBox h2 {
+    font-size: 30px;
+}
+
+.optionsBox {
+    position: absolute;
+    padding-right: 0;
+    right: 0;
+    top: 30%;
+    transform: translateY(-50%);
+    text-align: right;
+    font-size: 24px;
+}
+
+.optionsBox p {
+    position: relative;
+    display: block;
+    width: 140px;
+    transition: 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.optionsBox p span {
+    display: block;
+    margin-right: 10px;
+}
+
+.optionsBox p:hover {
+    color: white;
+    /* border-bottom: solid 3px black; */
+    font-size: 28px;
+}
+
+.optionsBox p:hover .bord {
+    left: 6%;
+}
+
+.optionsBox .bord {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    bottom: 0;
+    left: 100%;
+    transition: .4s;
+}
+
+@keyframes movingBgBox {
+    0% {
+        opacity: 0;
+        left: 35%;
+    }
+
+    2% {
+        opacity: 0;
+        left: 35%;
+    }
+
+    25% {
+        opacity: 1;
+        left: 50%;
+    }
+
+    65% {
+        opacity: 1;
+        left: 50%;
+    }
+
+    93% {
+        opacity: 1;
+        left: 50%;
+    }
+
+    100% {
+        opacity: 0;
+        left: 50%;
+    }
+}
+
+@keyframes movingImgBox {
+    0% {
+        opacity: 0;
+        right: 0;
+    }
+
+    2% {
+        opacity: 0;
+        right: 0;
+
+    }
+
+    25% {
+        opacity: 1;
+        right: 20%;
+    }
+
+    65% {
+        opacity: 1;
+        right: 20%;
+    }
+
+    80% {
+        opacity: 1;
+        right: 20%;
+    }
+
+    98% {
+        opacity: 1;
+        right: 20%;
+    }
+
+    100% {
+        opacity: 0;
+        right: 20%;
+    }
+}
+
+/* TRENER MEN */
+.boxerPage {
+    position: relative;
+    overflow: hidden;
+}
+
+.boxerPage .box-right.active {
+    filter: brightness(30%) blur(2px);
+}
+
+/* BIO BOX */
+
+.boxerPage .infoBioB {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    color: white;
+    opacity: 0;
+}
+
+.boxerPage .infoBioB.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.boxerPage .infoBioB.active div {
+    margin: 10px 0 0 10px;
+}
+
+.boxerPage .infoBioB.active p:nth-of-type(2) {
+    margin-top: 20px;
+}
+
+.boxerPage .infoBioB.active p .fas {
+    margin-right: 10px;
+}
+
+.boxerPage .infoBioB.active p:nth-of-type(2) .fas {
+    color: gold;
+}
+
+.boxerPage .infoBioB.active p:nth-of-type(3) .fas {
+    color: silver;
+}
+
+.boxerPage .infoBioB.active p:nth-of-type(4) .fas {
+    color: brown;
+}
+
+/* TRAINING BOX */
+
+.boxerPage .infotrainB {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    color: white;
+    opacity: 0;
+}
+
+.boxerPage .infotrainB.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.boxerPage .infotrainB.active div {
+    margin: 10px 0 0 10px;
+}
+
+.boxerPage .infotrainB.active a:nth-of-type(1) {
+    margin-top: 10px;
+}
+
+.boxerPage .infotrainB.active .fab {
+    margin-right: 10px;
+}
+
+.boxerPage .infotrainB.active a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.boxerPage .infotrainB.active a:hover .fab {
+    color: red;
+}
+
+.boxerPage .infotrainB.active a:hover {
+    font-size: 18px;
+}
+
+/* CONTACT BOX */
+.boxerPage .infocontB {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    color: white;
+    opacity: 0;
+}
+
+.boxerPage .infocontB.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.boxerPage .infocontB.active span {
+    margin-left: 10px;
+}
+
+.boxerPage .infocontB.active div {
+    margin: 10px 0 0 10px;
+}
+
+.boxerPage .infocontB.active a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.boxerPage .infocontB.active a .fas,
+.boxerPage .infocontB.active a .fab {
+    transition: 0.3s;
+}
+
+.boxerPage .infocontB.active a:hover {
+    font-size: 18px;
+}
+
+.boxerPage .infocontB.active a:nth-of-type(1):hover .fa-facebook {
+    color: blue;
+}
+
+.boxerPage .infocontB.active a:nth-of-type(2):hover .fa-instagram {
+    color: purple;
+}
+
+.boxerPage .infocontB.active a:nth-of-type(3):hover .fa-phone-square-alt {
+    color: green;
+}
+
+.boxerPage .infocontB.active a:nth-of-type(4):hover .fa-envelope {
+    color: yellow;
+}
+
+.boxerPage .infocontB.active div h1 {
+    margin-bottom: 10px;
+}
+
+@media (max-width:1599px) {
+
+    .bg {
+        top: 50%;
+        left: 35%;
+        transform: translate(-40%, -35%);
+        font-size: 80px;
+    }
+
+
+    .infoBox h1 {
+        font-size: 60px;
+    }
+
+    .infoBox h2 {
+        font-size: 25px;
+    }
+
+    .optionsBox {
+        text-align: right;
+        font-size: 22px;
+    }
+
+    .optionsBox p:hover {
+        font-size: 26px;
+    }
+
+    @keyframes movingBgBox {
+        0% {
+            opacity: 0;
+            left: 35%;
+        }
+
+        2% {
+            opacity: 0;
+            left: 35%;
+        }
+
+        25% {
+            opacity: 1;
+            left: 45%;
+        }
+
+        65% {
+            opacity: 1;
+            left: 45%;
+        }
+
+        93% {
+            opacity: 1;
+            left: 45%;
+        }
+
+        100% {
+            opacity: 0;
+            left: 45%;
+        }
+    }
+
+    @keyframes movingImgBox {
+        0% {
+            opacity: 0;
+            right: 0;
+        }
+
+        2% {
+            opacity: 0;
+            right: 0;
+
+        }
+
+        25% {
+            opacity: 1;
+            right: 12%;
+        }
+
+        65% {
+            opacity: 1;
+            right: 12%;
+        }
+
+        80% {
+            opacity: 1;
+            right: 12%;
+        }
+
+        98% {
+            opacity: 1;
+            right: 12%;
+        }
+
+        100% {
+            opacity: 0;
+            right: 12%;
+        }
+    }
+
+}
+
+@media (max-width:1439px) {
+
+    .infoBox h1 {
+        font-size: 54px;
+    }
+
+    .infoBox h2 {
+        font-size: 22px;
+    }
+}
+
+@media (orientation: landscape) and (max-width:1024px) {
+    .bg {
+        top: 55%;
+        font-size: 70px;
+    }
+
+    .box-left img {
+        height: 42vh;
+    }
+
+    .infoBox h1 {
+        font-size: 46px;
+    }
+
+    .infoBox h2 {
+        font-size: 20px;
+    }
+
+    .optionsBox {
+        font-size: 26px;
+    }
+
+    .optionsBox p:hover {
+        font-size: 28px;
+    }
+
+    .boxerPage .infotrainB.active a {
+        font-size: 18px;
+    }
+
+    @keyframes movingImgBox {
+        0% {
+            opacity: 0;
+            right: 0;
+        }
+
+        2% {
+            opacity: 0;
+            right: 0;
+
+        }
+
+        25% {
+            opacity: 1;
+            right: 8%;
+        }
+
+        65% {
+            opacity: 1;
+            right: 8%;
+        }
+
+        80% {
+            opacity: 1;
+            right: 8%;
+        }
+
+        98% {
+            opacity: 1;
+            right: 8%;
+        }
+
+        100% {
+            opacity: 0;
+            right: 8%;
+        }
+    }
+
+}
+
+@media (orientation: landscape) and (max-width:823px) {
+    .bg {
+        top: 65%;
+        font-size: 45px;
+    }
+
+    .box-title {
+        height: 10%;
+    }
+
+    .box-title h1 {
+        line-height: normal;
+        font-size: 35px;
+    }
+
+
+    .box-left img {
+        height: 42vh;
+    }
+
+    .infoBox h1 {
+        font-size: 32px;
+    }
+
+    .infoBox h2 {
+        font-size: 20px;
+    }
+
+    .optionsBox {
+        font-size: 18px;
+        top: 40%;
+    }
+
+    .optionsBox p:hover {
+        font-size: 20px;
+    }
+
+    .boxerPage .infotrainB.active a {
+        font-size: 18px;
+    }
+
+    @keyframes movingImgBox {
+        0% {
+            opacity: 0;
+            right: 0;
+        }
+
+        2% {
+            opacity: 0;
+            right: 0;
+
+        }
+
+        25% {
+            opacity: 1;
+            right: 25%;
+        }
+
+        65% {
+            opacity: 1;
+            right: 25%;
+        }
+
+        80% {
+            opacity: 1;
+            right: 25%;
+        }
+
+        98% {
+            opacity: 1;
+            right: 25%;
+        }
+
+        100% {
+            opacity: 0;
+            right: 25%;
+        }
+    }
+
+}
+
+@media (orientation: landscape) and (max-width:746px) {
+    .bg {
+        top: 75%;
+        font-size: 40px;
+    }
+
+    .box-title {
+        height: 10%;
+    }
+
+    .box-left,
+    .box-right {
+        height: calc(100vh - 10%);
+    }
+
+    .box-title h1 {
+        font-size: 35px;
+    }
+
+    .box-left img {
+        height: 47vh;
+    }
+
+    .infoBox h1 {
+        font-size: 28px;
+    }
+
+    .infoBox h2 {
+        font-size: 18px;
+    }
+
+    .optionsBox {
+        top: 45%;
+        font-size: 22px;
+    }
+
+    .optionsBox p:hover {
+        font-size: 24px;
+    }
+
+
+    @keyframes movingImgBox {
+        0% {
+            opacity: 0;
+            right: 10%;
+        }
+
+        2% {
+            opacity: 0;
+            right: 10%;
+
+        }
+
+        25% {
+            opacity: 1;
+            right: 24%;
+        }
+
+        65% {
+            opacity: 1;
+            right: 24%;
+        }
+
+        80% {
+            opacity: 1;
+            right: 24%;
+        }
+
+        98% {
+            opacity: 1;
+            right: 24%;
+        }
+
+        100% {
+            opacity: 0;
+            right: 24%;
+        }
+    }
+
+    .boxerPage .infoBioB,
+    .boxerPage .infotrainB,
+    .boxerPage .infocontB h1 {
+        font-size: 16px;
+    }
+
+    .boxerPage .infoBioB,
+    .boxerPage .infotrainB,
+    .boxerPage .infocontB p {
+        font-size: 12px;
+    }
+
+    .boxerPage .infotrainB.active a {
+        font-size: 16px;
+    }
+
+    .optionsBox p:hover .bord {
+        left: 24%;
+    }
+}
+
+@media (orientation: landscape) and (max-width:667px) {
+    .box-title h1 {
+        font-size: 30px;
+    }
+
+    .infoBox h1 {
+        font-size: 24px;
+    }
+
+    .infoBox h2 {
+        font-size: 16px;
+    }
+
+    .optionsBox {
+        top: 45%;
+        font-size: 20px;
+    }
+
+    .optionsBox p:hover {
+        font-size: 22px;
+    }
+}
+
+@media (orientation: landscape) and (max-width:568px) {
+    .bg {
+        top: 75%;
+        font-size: 35px;
+    }
+
+    .box-title h1 {
+        font-size: 25px;
+    }
+
+    .infoBox h1 {
+        font-size: 22px;
+    }
+
+    .infoBox h2 {
+        font-size: 14px;
+    }
+
+    .optionsBox {
+        top: 45%;
+        font-size: 18px;
+    }
+
+    .optionsBox p:hover {
+        font-size: 20px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+
+    .box-left,
+    .box-right {
+        width: 100%;
+        float: none;
+        height: calc(50vh - 50px);
+    }
+
+    .bg {
+        top: 55%;
+        font-size: 70px;
+    }
+
+    .box-left img {
+        height: 35vh;
+    }
+
+    .infoBox h1 {
+        font-size: 46px;
+    }
+
+    .infoBox h2 {
+        font-size: 20px;
+    }
+
+    .optionsBox {
+        top: 50%;
+        font-size: 34px;
+    }
+
+    .optionsBox p:hover {
+        font-size: 36px;
+    }
+
+    /* .boxerPage .infotrainB.active a {
+        font-size: 18px;
+    } */
+
+    .boxerPage .infoBioB,
+    .boxerPage .infocontB,
+    .boxerPage .infotrainB {
+        left: 0%;
+        top: calc(50% + 50px);
+        height: calc(50% - 50px);
+        width: 100%;
+    }
+
+    .boxerPage .infoBioB h1,
+    .boxerPage .infocontB h1,
+    .boxerPage .infotrainB h1 {
+        font-size: 28px;
+    }
+
+    .boxerPage .infoBioB p,
+    .boxerPage .infocontB p,
+    .boxerPage .infotrainB p {
+        font-size: 24px;
+    }
+
+    .boxerPage .infotrainB a {
+        font-size: 28px;
+    }
+
+    @keyframes movingImgBox {
+        0% {
+            opacity: 0;
+            right: 0;
+        }
+
+        2% {
+            opacity: 0;
+            right: 0;
+
+        }
+
+        25% {
+            opacity: 1;
+            right: 25%;
+        }
+
+        65% {
+            opacity: 1;
+            right: 25%;
+        }
+
+        80% {
+            opacity: 1;
+            right: 25%;
+        }
+
+        98% {
+            opacity: 1;
+            right: 25%;
+        }
+
+        100% {
+            opacity: 0;
+            right: 25%;
+        }
+    }
+
+    @keyframes movingBgBox {
+        0% {
+            opacity: 0;
+            left: 25%;
+        }
+
+        2% {
+            opacity: 0;
+            left: 25%;
+        }
+
+        25% {
+            opacity: 1;
+            left: 40%;
+        }
+
+        65% {
+            opacity: 1;
+            left: 40%;
+        }
+
+        93% {
+            opacity: 1;
+            left: 40%;
+        }
+
+        100% {
+            opacity: 0;
+            left: 40%;
+        }
+    }
+}
+
+@media (orientation: portrait) and (max-width: 414px) {
+
+    .box-title h1 {
+        font-size: 35px;
+    }
+
+    .bg {
+        font-size: 0px;
+        animation: none;
+    }
+
+    .box-left img {
+        height: 28vh;
+    }
+
+    .infoBox h1 {
+        font-size: 24px;
+    }
+
+    .infoBox h2 {
+        font-size: 14px;
+    }
+
+    .optionsBox {
+        top: 50%;
+        font-size: 28px;
+    }
+
+    .optionsBox p:hover {
+        font-size: 30px;
+    }
+
+    .boxerPage .infoBioB h1,
+    .boxerPage .infocontB h1,
+    .boxerPage .infotrainB h1 {
+        font-size: 18px;
+    }
+
+    .boxerPage .infoBioB p,
+    .boxerPage .infocontB p,
+    .boxerPage .infotrainB p {
+        font-size: 10px;
+    }
+
+    .boxerPage .infotrainB a {
+        font-size: 18px;
+    }
+
+    @keyframes movingImgBox {
+        0% {
+            opacity: 0;
+            right: 10%;
+        }
+
+        2% {
+            opacity: 0;
+            right: 10%;
+
+        }
+
+        25% {
+            opacity: 1;
+            right: 25%;
+        }
+
+        65% {
+            opacity: 1;
+            right: 25%;
+        }
+
+        80% {
+            opacity: 1;
+            right: 25%;
+        }
+
+        98% {
+            opacity: 1;
+            right: 25%;
+        }
+
+        100% {
+            opacity: 0;
+            right: 25%;
+        }
+    }
+}
+
+@media (orientation: portrait) and (max-width: 375px) {
+    .boxerPage .box-title h1 {
+        font-size: 26px;
+    }
+
+    .box-left,
+    .box-right {
+        height: calc(50vh - 25px);
+    }
+
+    .box-title {
+        height: 50px;
+    }
+
+    .box-title h1 {
+        font-size: 35px;
+        line-height: 50px;
+    }
+
+    .optionsBox {
+        font-size: 22px;
+    }
+
+    .optionsBox p:hover {
+        font-size: 24px;
+    }
+
+
+
+    @keyframes movingImgBox {
+        0% {
+            opacity: 0;
+            right: 10%;
+        }
+
+        2% {
+            opacity: 0;
+            right: 10%;
+
+        }
+
+        25% {
+            opacity: 1;
+            right: 25%;
+        }
+
+        65% {
+            opacity: 1;
+            right: 25%;
+        }
+
+        80% {
+            opacity: 1;
+            right: 25%;
+        }
+
+        98% {
+            opacity: 1;
+            right: 25%;
+        }
+
+        100% {
+            opacity: 0;
+            right: 25%;
+        }
+    }
+}

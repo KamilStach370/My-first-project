@@ -1,0 +1,449 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrap {
+    margin: 0 auto;
+    max-width: 1920px;
+    padding: 0 10%;
+    background-color: #0f0f0f;
+    overflow: hidden;
+}
+
+.secondPage {
+    position: relative;
+    height: 100vh;
+    background-color: #000;
+}
+
+.secondPage img {
+    position: absolute;
+    left: 0;
+    top: 25%;
+    height: 20vw;
+}
+
+.welcome {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    color: white;
+    width: 33vw;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    z-index: 1;
+}
+
+.welcome h1 {
+    font-size: 72px;
+    font-weight: bold;
+    line-height: 75px;
+    color: #990000;
+    border-bottom: 2px solid #ff0000;
+}
+
+.welcome p {
+    font-size: 24px;
+}
+
+.chose {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    color: white;
+    width: 33vw;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    z-index: 1;
+}
+
+.chose h2 {
+    font-size: 36px;
+    color: #990000;
+    border-bottom: 2px solid #ff0000;
+}
+
+.chose .flexi {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+}
+
+.chose p {
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+}
+
+.chose p .fas {
+    display: block;
+    font-size: 50px;
+}
+
+.chose p:hover {
+    color: #990000;
+}
+
+@media (max-width:1599px) {
+    .secondPage img {
+        top: 28%;
+    }
+
+    .welcome {
+        top: 15%;
+        left: 50%;
+    }
+
+    .welcome h1 {
+        font-size: 64px;
+        line-height: 65px;
+    }
+
+    .welcome p {
+        font-size: 20px;
+    }
+
+    .chose {
+        top: 60%;
+        left: 50%;
+        width: 33vw;
+    }
+
+    .chose h2 {
+        font-size: 32px;
+    }
+
+    .chose p {
+        font-size: 20px;
+    }
+
+    .chose p .fas {
+        font-size: 40px;
+    }
+}
+
+@media (max-width:1439px) {
+    .secondPage img {
+        top: 30%;
+    }
+
+    .welcome h1 {
+        font-size: 54px;
+        line-height: 55px;
+    }
+
+    .welcome p {
+        font-size: 18px;
+    }
+
+    .chose {
+        top: 55%;
+        left: 50%;
+        width: 33vw;
+    }
+
+    .chose h2 {
+        font-size: 27px;
+    }
+
+    .chose p {
+        font-size: 18px;
+    }
+
+    .chose p .fas {
+        font-size: 40px;
+    }
+}
+
+@media (orientation: landscape) and (max-width:1366px) {
+    .secondPage img {
+        top: 30%;
+        height: 27vw;
+    }
+
+    .welcome {
+        top: 15%;
+    }
+
+    .welcome h1 {
+        font-size: 50px;
+        line-height: 51px;
+    }
+
+    .welcome p {
+        font-size: 16px;
+    }
+
+    .chose {
+        top: 70%;
+    }
+
+    .chose h2 {
+        font-size: 25px;
+    }
+
+    .chose p {
+        font-size: 16px;
+    }
+
+    .chose p .fas {
+        font-size: 60px;
+    }
+}
+
+@media (orientation: landscape) and (max-width:1024px) {
+    .secondPage img {
+        top: 25%;
+        height: 24vw;
+    }
+
+    .welcome {
+        top: 10%;
+    }
+
+    .welcome h1 {
+        font-size: 50px;
+        line-height: 51px;
+    }
+
+    .welcome p {
+        font-size: 16px;
+    }
+
+    .chose {
+        top: 55%;
+    }
+
+    .chose h2 {
+        font-size: 25px;
+    }
+
+    .chose p {
+        line-height: 30px;
+        width: 50%;
+        font-size: 16px;
+    }
+
+    .chose p .fas {
+        font-size: 60px;
+    }
+}
+
+@media (orientation: landscape) and (max-width:823px) {
+    .secondPage img {
+        top: 30%;
+        height: 18vw;
+    }
+
+    .welcome h1 {
+        font-size: 30px;
+        line-height: 31px;
+    }
+
+    .welcome p {
+        font-size: 12px;
+    }
+
+    .chose h2 {
+        font-size: 15px;
+    }
+
+    .chose p {
+        font-size: 12px;
+    }
+
+
+    .chose p .fas {
+        font-size: 30px;
+    }
+}
+
+@media (orientation: landscape) and (max-width:720px) {
+    .welcome h1 {
+        font-size: 24px;
+        line-height: 25px;
+    }
+
+    .welcome p {
+        font-size: 10px;
+    }
+
+    .chose h2 {
+        font-size: 14px;
+    }
+
+    .chose p {
+        font-size: 10px;
+    }
+}
+
+@media (orientation: landscape) and (max-width:568px) {
+    .welcome h1 {
+        font-size: 20px;
+        line-height: 21px;
+    }
+
+    .welcome p {
+        font-size: 8px;
+    }
+
+    .chose h2 {
+        font-size: 12px;
+    }
+
+    .chose p {
+        font-size: 8px;
+
+        line-height: 22px;
+    }
+
+    .chose p .fas {
+        font-size: 22px;
+    }
+
+    .chose {
+        top: 50%;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+    .secondPage img {
+        top: 30%;
+        height: auto;
+        width: 100%;
+    }
+
+    .welcome {
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40vw;
+    }
+
+    .chose {
+        top: 65%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60vw;
+    }
+
+    .welcome h1 {
+
+        font-size: 60px;
+        line-height: 61px;
+    }
+
+    .welcome p {
+        font-size: 16px;
+    }
+
+    .chose h2 {
+        font-size: 34px;
+    }
+
+    .chose p {
+        font-size: 16px;
+        width: 50%;
+        padding: 10px;
+    }
+
+
+    .chose p .fas {
+        font-size: 60px;
+
+    }
+}
+
+@media (orientation: portrait) and (max-width: 414px) {
+    .secondPage img {
+        top: 35%;
+        height: auto;
+        width: 100%;
+    }
+
+    .welcome {
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;
+    }
+
+    .chose {
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75%;
+    }
+
+    .welcome h1 {
+
+        font-size: 40px;
+        line-height: 41px;
+    }
+
+    .welcome p {
+        font-size: 14px;
+    }
+
+    .chose h2 {
+        font-size: 20px;
+    }
+
+    .chose p {
+        font-size: 10px;
+    }
+
+
+    .chose p .fas {
+        font-size: 45px;
+
+    }
+}
+
+@media (orientation: portrait) and (max-width: 375px) {
+    .secondPage img {
+        top: 35%;
+        height: auto;
+        width: 100%;
+    }
+
+    .welcome {
+        top: 10%;
+    }
+
+    .chose {
+        top: 65%;
+    }
+
+    .welcome h1 {
+
+        font-size: 30px;
+        line-height: 31px;
+    }
+
+    .welcome p {
+        font-size: 10px;
+    }
+
+    .chose h2 {
+        font-size: 16px;
+    }
+
+    .chose p {
+        font-size: 8px;
+    }
+
+
+    .chose p .fas {
+        font-size: 30px;
+    }
+}
